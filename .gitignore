@@ -1,0 +1,26 @@
+
+ise
+build/*
+*.pbxuser
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*~
+
+# extra ignores
+Pods
+*.swp
+
+# other version control systems
+.svn
+.git
+
+# OS X files
+.DS_Store
+profile
