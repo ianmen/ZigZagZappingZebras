@@ -1,16 +1,15 @@
 //
-//  StudentsViewController
+//  StudentsViewController.h
 //  Kentalis
 //
-//  Created by Bob Van hees on 10-03-14.
+//  Created by Lars van Beek on 11/03/14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Student.h"
-#import "ObjectiveRecord.h"
 
-@interface StudentsViewController : UIViewController
+@interface StudentsViewController : UITableViewController
 
-@property(strong, nonatomic) Student *bob;
+@property (strong, nonatomic) NSArray *studentsArray;
+
 @end
