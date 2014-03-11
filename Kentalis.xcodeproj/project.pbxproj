@@ -27,6 +27,7 @@
 		60C0D20118CF33B2008A305B /* Program.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C0D20018CF33B2008A305B /* Program.m */; };
 		60C0D20418CF33B3008A305B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C0D20318CF33B3008A305B /* User.m */; };
 		60C0D20718CF33B3008A305B /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C0D20618CF33B3008A305B /* Activity.m */; };
+		60FAB1BE18CF3F6D0037E95C /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FAB1BD18CF3F6D0037E95C /* ActivityViewController.m */; };
 		67D3700990AA46AAB584B433 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A928D1570340481387E7521E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		60C0D20318CF33B3008A305B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		60C0D20518CF33B3008A305B /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 		60C0D20618CF33B3008A305B /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		60FAB1BC18CF3F6D0037E95C /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		60FAB1BD18CF3F6D0037E95C /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		A928D1570340481387E7521E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +147,8 @@
 				46294F7B18BB553400016E8F /* Supporting Files */,
 				46C2D3E918CF3B780001372A /* StudentsViewController.h */,
 				46C2D3EA18CF3B780001372A /* StudentsViewController.m */,
+				60FAB1BC18CF3F6D0037E95C /* ActivityViewController.h */,
+				60FAB1BD18CF3F6D0037E95C /* ActivityViewController.m */,
 			);
 			path = Kentalis;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */,
 				46294F8118BB553400016E8F /* main.m in Sources */,
 				60C0D1FE18CF33B2008A305B /* Student.m in Sources */,
+				60FAB1BE18CF3F6D0037E95C /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
