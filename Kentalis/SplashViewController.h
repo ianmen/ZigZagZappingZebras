@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Student.h"
+#import "ObjectiveRecord.h"
 
 @interface SplashViewController : UIViewController
 

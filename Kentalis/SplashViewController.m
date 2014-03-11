@@ -28,7 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    // Define the model we would use
+    [CoreDataManager sharedManager].modelName = @"Model";
     
+    //Load the students
     [self loadStudents];
 }
 
@@ -42,7 +46,10 @@
 -(void)loadStudents
 {
     //Method for loading students from Webserive.
-    NSLog(@"Testing loadstudents");
+    
+    
+    
+    
     
     //After loading students from webservice create NSMangedObject for each of them.
     Student *bob = [Student create];
