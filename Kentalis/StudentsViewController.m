@@ -1,13 +1,14 @@
 //
-//  StudentsViewController
+//  StudentsViewController.m
 //  Kentalis
 //
-//  Created by Bob Van hees on 10-03-14.
+//  Created by Lars van Beek on 11/03/14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
 #import "StudentsViewController.h"
-#import "Student.h"
+
+#import "User.h"
 
 @interface StudentsViewController ()
 
@@ -15,9 +16,9 @@
 
 @implementation StudentsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -26,14 +27,18 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-
-    // Define the model we would use
+    // Define the model
     [CoreDataManager sharedManager].modelName = @"Model";
     
-    //Load the students
-    [self loadStudents];
+    [super viewDidLoad];
+    
+    self.studentsArray = [User all];
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,27 +47,81 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
 
--(void)loadStudents
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //Method for loading students from Webserive.
-
-    
-    //After loading students from webservice create NSMangedObject for each of them.
-    //Load in the dummy data
-    
-    int i = 0;
-    while ( i < 10) {
-        
-        Student *bob = [Student create];
-        bob.name = @"John";
-        [bob save];
-        i++;
-        
-    }
-
-
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a story board-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+
+ */
 
 @end

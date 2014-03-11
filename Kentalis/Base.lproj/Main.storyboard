@@ -4,6 +4,35 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Students View Controller - Leerlingen-->
+        <scene sceneID="v4s-4J-N5F">
+            <objects>
+                <tableViewController id="DaD-26-3cE" customClass="StudentsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="k1J-tA-4kB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mpj-sD-GZt">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mpj-sD-GZt" id="YX0-gq-VzU">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DaD-26-3cE" id="ruh-4Z-6Hv"/>
+                            <outlet property="delegate" destination="DaD-26-3cE" id="QcQ-Qa-vzv"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Leerlingen" id="qHD-WZ-kKB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7o5-bB-5Df" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="178"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Mv-4W-waY">
             <objects>
@@ -15,12 +44,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="DaD-26-3cE" kind="relationship" relationship="viewControllers" id="22M-tI-1Ce"/>
                         <segue destination="p1x-lX-nX6" kind="relationship" relationship="viewControllers" id="dIL-aK-Mq9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmH-X4-Sox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="533"/>
+            <point key="canvasLocation" x="551" y="623"/>
         </scene>
         <!--View Controller - Activiteit-->
         <scene sceneID="qhZ-di-87e">
@@ -39,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MqZ-S2-kgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="865"/>
+            <point key="canvasLocation" x="1085" y="949"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
