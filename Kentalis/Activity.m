@@ -1,19 +1,20 @@
 //
-//  Student.m
+//  Activity.m
 //  Kentalis
 //
 //  Created by Bob Van hees on 11-03-14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
-#import "Student.h"
+#import "Activity.h"
 #import "Observations.h"
+#import "Program.h"
 
 
-@implementation Student
+@implementation Activity
 
-@dynamic name;
-@dynamic photo;
-@dynamic observations;
+@dynamic title;
+@dynamic observed;
+@dynamic inProgram;
 
 @end

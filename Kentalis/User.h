@@ -1,5 +1,5 @@
 //
-//  Student.h
+//  User.h
 //  Kentalis
 //
 //  Created by Bob Van hees on 11-03-14.
@@ -11,10 +11,10 @@
 
 @class Observations;
 
-@interface Student : NSManagedObject
+@interface User : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSData * name;
 @property (nonatomic, retain) NSData * photo;
-@property (nonatomic, retain) Observations *observations;
+@property (nonatomic, retain) Observations *madeObservation;
 
 @end

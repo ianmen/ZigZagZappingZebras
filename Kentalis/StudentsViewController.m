@@ -1,19 +1,19 @@
 //
-//  SplashViewController.m
+//  StudentsViewController
 //  Kentalis
 //
 //  Created by Bob Van hees on 10-03-14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
-#import "SplashViewController.h"
+#import "StudentsViewController.h"
 #import "Student.h"
 
-@interface SplashViewController ()
+@interface StudentsViewController ()
 
 @end
 
-@implementation SplashViewController
+@implementation StudentsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,9 +52,18 @@
     
     
     //After loading students from webservice create NSMangedObject for each of them.
-    Student *bob = [Student create];
-    bob.name = @"John";
-    [bob save];
+    //Load in the dummy data
+    
+    int i = 0;
+    while ( i < 10) {
+        
+        Student *bob = [Student create];
+        bob.name = @"John";
+        [bob save];
+        i++;
+        
+    }
+
 
 }
 

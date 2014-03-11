@@ -1,5 +1,5 @@
 //
-//  SplashViewController.h
+//  StudentsViewController
 //  Kentalis
 //
 //  Created by Bob Van hees on 10-03-14.
@@ -10,7 +10,7 @@
 #import "Student.h"
 #import "ObjectiveRecord.h"
 
-@interface SplashViewController : UIViewController
+@interface StudentsViewController : UIViewController
 
 @property(strong, nonatomic) Student *bob;
 @end
