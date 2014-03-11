@@ -46,10 +46,7 @@
 -(void)loadStudents
 {
     //Method for loading students from Webserive.
-    
-    
-    
-    
+
     
     //After loading students from webservice create NSMangedObject for each of them.
     //Load in the dummy data
