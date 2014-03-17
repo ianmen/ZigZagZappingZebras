@@ -112,13 +112,16 @@
         
         //Create some of the programs for each day
         //Create the program for monday
+        int i = 0;
+        while (i < 98) {
+            
         Program *pr = [Program create];
-        
         pr.dayWeek = @"monday";
         pr.order = 0;
         pr.fromActivity = ac;
         [pr save];
         
+        }
         
   
     }
