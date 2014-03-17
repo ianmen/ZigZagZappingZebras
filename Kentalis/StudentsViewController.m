@@ -97,7 +97,7 @@
     
     cell.textLabel.text = [student name];
     
-    return cell;
+    return cell; 
 }
 
 /*
