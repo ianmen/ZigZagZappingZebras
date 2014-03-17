@@ -21,7 +21,7 @@
         // Custom initialization
     }
     
-    [self loadActivities];
+    
     
     
     return self;
@@ -30,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Define the model
+    [CoreDataManager sharedManager].modelName = @"Model";
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -42,15 +45,72 @@
 
 {
     //First load some dummy data
-    int i = 0;
-    while ( i < 10) {
+    //If there is nothing in the database load the predifned data in.
+    if ([[Activity all] count] < 1){
         
         Activity *ac = [Activity create];
-        ac.title = @"Activity 1";
+        ac.title = @"Opstaan";
         [ac save];
-        i++;
         
+        Activity *ac1 = [Activity create];
+        ac1.title = @"Toilet";
+        [ac1 save];
+        
+        Activity *ac2 = [Activity create];
+        ac2.title = @"Douche";
+        [ac2 save];
+        
+        Activity *ac3 = [Activity create];
+        ac3.title = @"Afdrogen";
+        [ac3 save];
+        
+        Activity *ac4 = [Activity create];
+        ac4.title = @"Lens in/deodorant";
+        [ac4 save];
+        
+        Activity *ac5 = [Activity create];
+        ac5.title = @"Aankleden";
+        [ac5 save];
+        
+        Activity *ac6 = [Activity create];
+        ac6.title = @"Tandenpoetsen";
+        [ac6 save];
+        
+        Activity *ac7 = [Activity create];
+        ac7.title = @"Kalenderboek";
+        [ac7 save];
+        
+        Activity *ac8 = [Activity create];
+        ac8.title = @"Overgang";
+        [ac8 save];
+        
+        Activity *ac9 = [Activity create];
+        ac9.title = @"Ontbijt";
+        [ac9 save];
+        
+        
+        Activity *ac10 = [Activity create];
+        ac10.title = @"TV Kijken";
+        [ac10 save];
+        
+        Activity *ac11 = [Activity create];
+        ac11.title = @"Jas aan/wachten op stoel";
+        [ac11 save];
+        
+        Activity *ac12 = [Activity create];
+        ac12.title = @"Naar school lopen";
+        [ac12 save];
+        
+        Activity *ac13 = [Activity create];
+        ac13.title = @"Fruit eten";
+        [ac13 save];
+        
+        Activity *ac14 = [Activity create];
+        ac14.title = @"Lunchen";
+        [ac14 save];
+  
     }
+    
     
     //Load them in array
     self.activtyArray = [Activity all];
@@ -67,6 +127,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    [self loadActivities];
     
     // Return the number of sections.
     return 1;
@@ -80,6 +141,34 @@
     
     return [self.activtyArray count];
 }
+- (IBAction)addActivity:(id)sender {
+    
+    //Display
+    UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Activiteit" message:@"Nieuwe activiteit toevoegen" delegate:self cancelButtonTitle:@"Annuleren" otherButtonTitles: nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert addButtonWithTitle:@"Opslaan"];
+    [alert show];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 1) {  //
+        
+        //Create the new Activity
+        UITextField *nieuweActiviteit = [alertView textFieldAtIndex:0];
+        Activity *ac = [Activity create];
+        ac.title = nieuweActiviteit.text;
+        [ac save];
+        
+        //Refresh the table.
+        [self.tableView reloadData];
+
+    }
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
