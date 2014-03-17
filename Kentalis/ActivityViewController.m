@@ -108,21 +108,19 @@
         Activity *ac14 = [Activity create];
         ac14.title = @"Lunchen";
         [ac14 save];
-  
-    }
-    
-    //Create some of the programs for each day
-    if ([[Program all] count] < 1){
         
+        
+        //Create some of the programs for each day
         //Create the program for monday
         Program *pr = [Program create];
         
         pr.dayWeek = @"monday";
         pr.order = 0;
-        //pr.fromActivity = ac;
+        pr.fromActivity = ac;
         [pr save];
-
         
+        
+  
     }
     
     
