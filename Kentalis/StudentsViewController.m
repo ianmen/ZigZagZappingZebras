@@ -92,11 +92,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
-    Student *student = [self.studentsArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [student name];
-
+    cell.textLabel.text = [self.studentsArray objectAtIndex:indexPath.row];
     
     return cell;
 }
