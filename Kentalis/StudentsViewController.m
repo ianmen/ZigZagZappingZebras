@@ -93,9 +93,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+<<<<<<< HEAD
+    
+    cell.textLabel.text = [self.studentsArray objectAtIndex:indexPath.row];
+=======
     Student *student = [self.studentsArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [student name];
+>>>>>>> 40bc769cc234ce8abf9a541bfbd4cdbaa6a6bcb5
     
     return cell; 
 }
