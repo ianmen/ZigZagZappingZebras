@@ -109,21 +109,98 @@
         ac14.title = @"Lunchen";
         [ac14 save];
         
-        
-        //Create some of the programs for each day
-        //Create the program for monday
-        int i = 0;
-        while (i < 98) {
+        //Lelijke code
             
         Program *pr = [Program create];
         pr.dayWeek = @"monday";
-        pr.order = 0;
+        pr.order = [NSNumber numberWithInt:0];
         pr.fromActivity = ac;
         [pr save];
         
-        }
+        Program *pr1 = [Program create];
+        pr1.dayWeek = @"monday";
+        pr1.order = [NSNumber numberWithInt:1];
+        pr1.fromActivity = ac1;
+        [pr1 save];
         
-  
+        Program *pr2 = [Program create];
+        pr2.dayWeek = @"monday";
+        pr2.order = [NSNumber numberWithInt:2];
+        pr2.fromActivity = ac2;
+        [pr2 save];
+        
+        Program *pr3 = [Program create];
+        pr3.dayWeek = @"monday";
+        pr3.order = [NSNumber numberWithInt:3];
+        pr3.fromActivity = ac3;
+        [pr3 save];
+        
+        Program *pr4 = [Program create];
+        pr4.dayWeek = @"monday";
+        pr4.order = [NSNumber numberWithInt:4];
+        pr4.fromActivity = ac4;
+        [pr4 save];
+        
+        Program *pr5 = [Program create];
+        pr5.dayWeek = @"monday";
+        pr5.order = [NSNumber numberWithInt:5];
+        pr5.fromActivity = ac5;
+        [pr5 save];
+        
+        Program *pr6 = [Program create];
+        pr6.dayWeek = @"monday";
+        pr6.order = [NSNumber numberWithInt:6];
+        pr6.fromActivity = ac6;
+        [pr6 save];
+        
+        Program *pr7 = [Program create];
+        pr7.dayWeek = @"monday";
+        pr7.order = [NSNumber numberWithInt:7];
+        pr7.fromActivity = ac7;
+        [pr7 save];
+        
+        Program *pr8 = [Program create];
+        pr8.dayWeek = @"monday";
+        pr8.order = [NSNumber numberWithInt:8];
+        pr8.fromActivity = ac8;
+        [pr8 save];
+        
+        Program *pr9 = [Program create];
+        pr9.dayWeek = @"monday";
+        pr9.order = [NSNumber numberWithInt:9];
+        pr9.fromActivity = ac9;
+        [pr9 save];
+        
+        Program *pr10 = [Program create];
+        pr10.dayWeek = @"monday";
+        pr10.order = [NSNumber numberWithInt:10];
+        pr10.fromActivity = ac10;
+        [pr10 save];
+        
+        Program *pr11 = [Program create];
+        pr11.dayWeek = @"monday";
+        pr11.order = [NSNumber numberWithInt:11];
+        pr11.fromActivity = ac11;
+        [pr11 save];
+        
+        Program *pr12 = [Program create];
+        pr12.dayWeek = @"monday";
+        pr12.order = [NSNumber numberWithInt:12];
+        pr12.fromActivity = ac12;
+        [pr12 save];
+        
+        Program *pr13 = [Program create];
+        pr13.dayWeek = @"monday";
+        pr13.order = [NSNumber numberWithInt:13];
+        pr13.fromActivity = ac13;
+        [pr13 save];
+        
+        Program *pr14 = [Program create];
+        pr14.dayWeek = @"monday";
+        pr14.order = [NSNumber numberWithInt:14];
+        pr14.fromActivity = ac14;
+        [pr14 save];
+
     }
     
     

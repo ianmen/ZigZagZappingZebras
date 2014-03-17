@@ -98,7 +98,7 @@
         <scene sceneID="64R-TB-M8t">
             <objects>
                 <navigationController definesPresentationContext="YES" id="u0b-JM-ZjZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Studenten" id="N6R-0x-LbU"/>
+                    <tabBarItem key="tabBarItem" title="Studenten" image="student.png" id="N6R-0x-LbU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NYe-Cj-AKH">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -152,11 +152,78 @@
             </objects>
             <point key="canvasLocation" x="1703" y="1113"/>
         </scene>
+        <!--Dossier Table View Controller - Selecteer student-->
+        <scene sceneID="qkC-LB-EwS">
+            <objects>
+                <tableViewController id="UC1-J9-j8f" customClass="DossierTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8h9-Pi-n83">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="u96-jX-Dpk">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u96-jX-Dpk" id="Oue-zn-yLd">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CIm-41-Ocg" kind="push" trigger="accessoryAction" id="B6T-lu-t2P"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UC1-J9-j8f" id="gWc-8H-tvZ"/>
+                            <outlet property="delegate" destination="UC1-J9-j8f" id="u0M-vq-Xbf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selecteer student" id="F0d-An-eCc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvQ-dR-2eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="1935"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q3N-1w-OW0">
+            <objects>
+                <viewController id="CIm-41-Ocg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLe-CH-5Yr"/>
+                        <viewControllerLayoutGuide type="bottom" id="td5-fu-ZIH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lrM-Vb-nfR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="25i-Ci-jE9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXd-HB-KKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="1935"/>
+        </scene>
+        <!--Navigation Controller - Dossier-->
+        <scene sceneID="RLd-6I-ZFA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Aau-yK-SEL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dossier" image="dossier.png" id="UA3-Ed-bjs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHP-NS-VRW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UC1-J9-j8f" kind="relationship" relationship="rootViewController" id="Bur-Jy-8pg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yu-X9-F8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="1935"/>
+        </scene>
         <!--Navigation Controller - Activiteiten-->
         <scene sceneID="HW6-Rg-xUH">
             <objects>
                 <navigationController definesPresentationContext="YES" id="F2T-FX-Pj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activiteiten" id="TnG-1E-2Zg"/>
+                    <tabBarItem key="tabBarItem" title="Activiteiten" image="activity.png" id="TnG-1E-2Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zTo-N8-l5a">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -181,13 +248,19 @@
                     <connections>
                         <segue destination="u0b-JM-ZjZ" kind="relationship" relationship="viewControllers" id="T7g-tT-pYb"/>
                         <segue destination="F2T-FX-Pj7" kind="relationship" relationship="viewControllers" id="k1C-xC-Uqh"/>
+                        <segue destination="Aau-yK-SEL" kind="relationship" relationship="viewControllers" id="wD1-IT-xGS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmH-X4-Sox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="623"/>
+            <point key="canvasLocation" x="431" y="663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="activity.png" width="48" height="32"/>
+        <image name="dossier.png" width="48" height="32"/>
+        <image name="student.png" width="48" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
