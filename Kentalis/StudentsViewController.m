@@ -8,7 +8,7 @@
 
 #import "StudentsViewController.h"
 
-#import "User.h"
+#import "Student.h"
 
 @interface StudentsViewController ()
 
@@ -32,13 +32,36 @@
     
     [super viewDidLoad];
     
-    self.studentsArray = [User all];
+    [self loadStudents];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)loadStudents
+{
+    //First load some dummy data
+    //If there is nothing in the database load the predifned data in.
+    if ([[Student all] count] < 1){
+        
+        Student *student1 = [Student create];
+        student1.name = @"Mats";
+        [student1 save];
+        
+        Student *student2 = [Student create];
+        student2.name = @"Bob";
+        [student2 save];
+        
+        Student *student3 = [Student create];
+        student3.name = @"Lars";
+        [student3 save];
+    }
+    
+    //Load them in array
+    self.studentsArray = [Student all];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,24 +74,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.studentsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"reusableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = [self.studentsArray objectAtIndex:indexPath.row];
     
     return cell;
 }
