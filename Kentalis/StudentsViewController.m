@@ -95,7 +95,7 @@
     
     cell.textLabel.text = [self.studentsArray objectAtIndex:indexPath.row];
     
-    return cell;
+    return cell; 
 }
 
 /*
