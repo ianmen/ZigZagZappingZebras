@@ -111,6 +111,20 @@
   
     }
     
+    //Create some of the programs for each day
+    if ([[Program all] count] < 1){
+        
+        //Create the program for monday
+        Program *pr = [Program create];
+        
+        pr.dayWeek = @"monday";
+        pr.order = 0;
+        //pr.fromActivity = ac;
+        [pr save];
+
+        
+    }
+    
     
     //Load them in array
     self.activtyArray = [Activity all];
