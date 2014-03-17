@@ -1,21 +1,18 @@
 //
-//  StudentsViewController.m
+//  StudentDetailsViewController.m
 //  Kentalis
 //
-//  Created by Lars van Beek on 11/03/14.
+//  Created by Lars van Beek on 17/03/14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
-#import "StudentsViewController.h"
 #import "StudentDetailsViewController.h"
 
-#import "Student.h"
-
-@interface StudentsViewController ()
+@interface StudentDetailsViewController ()
 
 @end
 
-@implementation StudentsViewController
+@implementation StudentDetailsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,41 +25,13 @@
 
 - (void)viewDidLoad
 {
-    // Define the model
-    [CoreDataManager sharedManager].modelName = @"Model";
-    
     [super viewDidLoad];
     
-    [self loadStudents];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
--(void)loadStudents
-{
-    //First load some dummy data
-    //If there is nothing in the database load the predifned data in.
-    if ([[Student all] count] < 1){
-        
-        Student *student1 = [Student create];
-        student1.name = @"Mats";
-        [student1 save];
-        
-        Student *student2 = [Student create];
-        student2.name = @"Bob";
-        [student2 save];
-        
-        Student *student3 = [Student create];
-        student3.name = @"Lars";
-        [student3 save];
-    }
-    
-    //Load them in array
-    self.studentsArray = [Student all];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,42 +44,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.studentsArray count];
+    return 0;
 }
 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"reusableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    // Configure the cell...
     
-    Student *student = [self.studentsArray objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = [student name];
-    
-    return cell; 
+    return cell;
 }
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    
-    Student *student = [self.studentsArray objectAtIndex:indexPath.row];
-    
-    StudentDetailsViewController *destination = (StudentDetailsViewController *)[segue destinationViewController];
-    
-    destination.student = student
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -128,8 +83,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
@@ -154,13 +108,12 @@
 /*
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
- */
+*/
 
 @end
