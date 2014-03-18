@@ -7,7 +7,6 @@
 //
 
 #import "StudentsViewController.h"
-#import "StudentDetailsViewController.h"
 
 #import "Student.h"
 
@@ -99,17 +98,6 @@
     cell.textLabel.text = [student name];
     
     return cell; 
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    
-    Student *student = [self.studentsArray objectAtIndex:indexPath.row];
-    
-    StudentDetailsViewController *destination = (StudentDetailsViewController *)[segue destinationViewController];
-    
-    destination.student = student
 }
 
 /*
