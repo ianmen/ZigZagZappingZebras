@@ -204,9 +204,9 @@
 		602EB7A418CDD17200318B20 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				60C0D20218CF33B3008A305B /* User.h */,
 				60C0D20518CF33B3008A305B /* Activity.h */,
 				60C0D20618CF33B3008A305B /* Activity.m */,
-				60C0D20218CF33B3008A305B /* User.h */,
 				60C0D20318CF33B3008A305B /* User.m */,
 				60C0D1FF18CF33B2008A305B /* Program.h */,
 				60C0D20018CF33B2008A305B /* Program.m */,

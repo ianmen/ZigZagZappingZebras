@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     
+    self.title = self.student.name;
+    self.activityCellLabel.text = @"Activiteit: test";
+    self.transitionToActivityLabel.text = @"Overgang naar: fruit eten";
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -41,6 +45,7 @@
 }
 
 #pragma mark - Table view data source
+/*
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -56,7 +61,6 @@
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

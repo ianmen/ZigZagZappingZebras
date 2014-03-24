@@ -110,7 +110,7 @@
     
     StudentDetailsViewController *destination = (StudentDetailsViewController *)[segue destinationViewController];
 
-    //destination.student = student
+    destination.student = student;
 }
 
 /*
