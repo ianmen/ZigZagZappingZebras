@@ -27,9 +27,29 @@
 {
     [super viewDidLoad];
     
+    // Set view title
     self.title = self.student.name;
-    self.activityCellLabel.text = @"Activiteit: test";
-    self.transitionToActivityLabel.text = @"Overgang naar: fruit eten";
+    
+    // Get current day of the week
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    NSString *dayOfWeek = [[dateFormatter stringFromDate:[NSDate date]] lowercaseString];
+    
+    // Get program for current day
+    self.program = [Program where:@{ @"dayWeek" : dayOfWeek }];
+    NSEnumerator *enumerator = self.program.objectEnumerator;
+    
+    // Get the first activity of the program
+    Program *tempProgram = enumerator.nextObject;
+    Activity *activity = tempProgram.fromActivity;
+    
+    // Set program dependent cell content
+    self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", activity.title];
+    
+    // Get next activity for transition cell
+    tempProgram = enumerator.nextObject;
+    activity = tempProgram.fromActivity;
+    self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", activity.title];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

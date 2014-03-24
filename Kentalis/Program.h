@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Activity.h"
 
 
 @interface Program : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * order;
 @property (nonatomic, retain) NSString * dayWeek;
-@property (nonatomic, retain) NSManagedObject *fromActivity;
+@property (nonatomic, retain) Activity *fromActivity;
 
 @end
