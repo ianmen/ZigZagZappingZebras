@@ -8,6 +8,7 @@
 
 #import "DossierTableViewController.h"
 #import "DossierDetailsViewController.h"
+#import "StudentDetailsViewController.h"
 
 #import "Student.h"
 
@@ -148,13 +149,10 @@
      NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
      
      Student *student = [self.studentsArray objectAtIndex:indexPath.row];
-     NSLog(@"Student name is: %@", student.name);
      DossierDetailsViewController *destination = (DossierDetailsViewController *)[segue destinationViewController];
      
+     //Set the student of the destination view controller
      destination.student = student;
-     
+    
  }
- 
-
-
 @end

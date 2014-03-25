@@ -7,6 +7,8 @@
 //
 
 #import "DossierDetailsViewController.h"
+#import "Observations.h"
+#import "Activity.h"
 
 @interface DossierDetailsViewController ()
 
@@ -19,6 +21,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        // Instalization by searching for the assosiated activites which are belloning to this student.
+        
+  
+        
     }
     return self;
 }
@@ -27,6 +33,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Set view title
+    self.title = self.student.name;
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +46,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Table view data source
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Return the number of sections.
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    //return [self.studentsArray count];
+    
+    for(Observations *ob in self.student.observations){
+        
+        NSLog(@"%@", ob.date);
+        
+    }
+
+    return 1;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"reusableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    //Student *student = [self.studentsArray objectAtIndex:indexPath.row];
+    
+    //cell.textLabel.text = [student name];
+    
+    return cell;
+}
 
 @end

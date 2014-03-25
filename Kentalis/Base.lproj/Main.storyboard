@@ -217,7 +217,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CIm-41-Ocg" kind="push" id="Y3j-Y4-whr"/>
+                                    <segue destination="qFd-U7-eaJ" kind="push" id="4lR-MD-iiB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -232,24 +232,34 @@
             </objects>
             <point key="canvasLocation" x="1732" y="1935"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Q3N-1w-OW0">
+        <!--Dossier Details View Controller-->
+        <scene sceneID="av6-4J-ZDx">
             <objects>
-                <viewController id="CIm-41-Ocg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GLe-CH-5Yr"/>
-                        <viewControllerLayoutGuide type="bottom" id="td5-fu-ZIH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lrM-Vb-nfR">
+                <tableViewController id="qFd-U7-eaJ" customClass="DossierDetailsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GKT-Pq-fJW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="25i-Ci-jE9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xXd-HB-KKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="4X1-Bk-QKa">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4X1-Bk-QKa" id="QIU-eV-L9l">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qFd-U7-eaJ" id="O6m-bz-5fw"/>
+                            <outlet property="delegate" destination="qFd-U7-eaJ" id="fLP-Ed-bC1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="f5W-V1-eZW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dy-Vq-aoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="1935"/>
+            <point key="canvasLocation" x="2134" y="1925"/>
         </scene>
         <!--Navigation Controller - Dossier-->
         <scene sceneID="RLd-6I-ZFA">
