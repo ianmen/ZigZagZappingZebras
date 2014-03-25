@@ -7,6 +7,7 @@
 //
 
 #import "DossierTableViewController.h"
+#import "DossierDetailsViewController.h"
 
 #import "Student.h"
 
@@ -138,17 +139,22 @@
  return YES;
  }
  */
-
-/*
- #pragma mark - Navigation
  
  // In a story board-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+     
+     //Load in the new detail view controller of the dossier
+     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+     
+     Student *student = [self.studentsArray objectAtIndex:indexPath.row];
+     NSLog(@"Student name is: %@", student.name);
+     DossierDetailsViewController *destination = (DossierDetailsViewController *)[segue destinationViewController];
+     
+     destination.student = student;
+     
  }
  
- */
+
 
 @end
