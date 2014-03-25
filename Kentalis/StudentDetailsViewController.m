@@ -7,6 +7,7 @@
 //
 
 #import "StudentDetailsViewController.h"
+#import "EvaluateActivityViewController.h"
 
 @interface StudentDetailsViewController ()
 
@@ -67,13 +68,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    EvaluateActivityViewController *destination = (EvaluateActivityViewController *)[segue destinationViewController];
     
-    Student *student = [self.studentsArray objectAtIndex:indexPath.row];
+    destination.student = self.student;
     
-    StudentDetailsViewController *destination = (StudentDetailsViewController *)[segue destinationViewController];
-    
-    destination.student = student;
 }
 
 #pragma mark - Table view data source

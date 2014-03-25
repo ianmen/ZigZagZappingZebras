@@ -22,6 +22,7 @@
 		46294FA018BB553400016E8F /* KentalisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46294F9F18BB553400016E8F /* KentalisTests.m */; };
 		464FC65418D86E7000BC3326 /* StudentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464FC65318D86E7000BC3326 /* StudentDetailsViewController.m */; };
 		46C2D3EB18CF3B780001372A /* StudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C2D3EA18CF3B780001372A /* StudentsViewController.m */; };
+		46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */; };
 		60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60014EC818CDC943005DB276 /* Model.xcdatamodeld */; };
 		6017FCC218E1B9C700FD862F /* DossierDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */; };
 		6085D77518D70F0E003F2BF3 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77418D70F0E003F2BF3 /* student.png */; };
@@ -70,6 +71,8 @@
 		464FC65318D86E7000BC3326 /* StudentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailsViewController.m; sourceTree = "<group>"; };
 		46C2D3E918CF3B780001372A /* StudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsViewController.h; sourceTree = "<group>"; };
 		46C2D3EA18CF3B780001372A /* StudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsViewController.m; sourceTree = "<group>"; };
+		46FA20DF18E1C8D800AB140B /* EvaluateActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluateActivityViewController.h; sourceTree = "<group>"; };
+		46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluateActivityViewController.m; sourceTree = "<group>"; };
 		60014EC918CDC943005DB276 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6017FCC018E1B9C700FD862F /* DossierDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierDetailsViewController.h; sourceTree = "<group>"; };
 		6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierDetailsViewController.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				6085D77718D70F67003F2BF3 /* DossierTableViewController.m */,
 				6017FCC018E1B9C700FD862F /* DossierDetailsViewController.h */,
 				6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */,
+				46FA20DF18E1C8D800AB140B /* EvaluateActivityViewController.h */,
+				46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */,
 			);
 			path = Kentalis;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */,
 				46294F8118BB553400016E8F /* main.m in Sources */,
 				60C0D1FE18CF33B2008A305B /* Student.m in Sources */,
+				46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */,
 				60FAB1BE18CF3F6D0037E95C /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
