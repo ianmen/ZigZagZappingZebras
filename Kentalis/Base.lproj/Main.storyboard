@@ -73,15 +73,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CwO-4U-e22" style="IBUITableViewCellStyleDefault" id="RnE-ZG-EMZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CwO-4U-e22" style="IBUITableViewCellStyleDefault" id="RnE-ZG-EMZ">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RnE-ZG-EMZ" id="Wpn-se-dyJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CwO-4U-e22">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -89,6 +89,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8oa-dD-miG" kind="push" id="mca-qM-TrD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="9Ev-BO-WnV" style="IBUITableViewCellStyleDefault" id="g28-MH-dQR">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
@@ -141,6 +144,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkn-X1-6l7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2035" y="168"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bhM-cC-z9o">
+            <objects>
+                <viewController id="8oa-dD-miG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p8O-YG-ArB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dq9-o7-07P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uEe-AK-zxa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QLN-Da-GWv">
+                                <rect key="frame" x="16" y="214" width="289" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Slaap"/>
+                                    <segment title="Doezelig"/>
+                                    <segment title="Alert"/>
+                                    <segment title="Hoog"/>
+                                    <segment title="Stress"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ruimte voor eventuele opmerkingen" translatesAutoresizingMaskIntoConstraints="NO" id="1f0-aG-89l">
+                                <rect key="frame" x="20" y="263" width="280" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mU2-sh-4mQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geo-xr-LaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465" y="168"/>
         </scene>
         <!--Navigation Controller - Studenten-->
         <scene sceneID="64R-TB-M8t">

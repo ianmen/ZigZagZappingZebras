@@ -7,6 +7,7 @@
 //
 
 #import "StudentDetailsViewController.h"
+#import "EvaluateActivityViewController.h"
 
 @interface StudentDetailsViewController ()
 
@@ -41,15 +42,16 @@
     
     // Get the first activity of the program
     Program *tempProgram = enumerator.nextObject;
-    Activity *activity = tempProgram.fromActivity;
+    self.currentActivity = tempProgram.fromActivity;
     
     // Set program dependent cell content
-    self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", activity.title];
+    self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
     
     // Get next activity for transition cell
     tempProgram = enumerator.nextObject;
-    activity = tempProgram.fromActivity;
-    self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", activity.title];
+    self.nextActivity = tempProgram.fromActivity;
+    
+    self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,6 +64,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    EvaluateActivityViewController *destination = (EvaluateActivityViewController *)[segue destinationViewController];
+    
+    destination.student = self.student;
+    
 }
 
 #pragma mark - Table view data source

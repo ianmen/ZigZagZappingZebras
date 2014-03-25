@@ -17,6 +17,9 @@
 @property (nonatomic, strong) Student *student;
 @property (nonatomic, strong) NSArray *program;
 
+@property (nonatomic, strong) Activity *currentActivity;
+@property (nonatomic, strong) Activity *nextActivity;
+
 @property (strong, nonatomic) IBOutlet UILabel *activityCellLabel;
 @property (strong, nonatomic) IBOutlet UILabel *transitionToActivityLabel;
 
