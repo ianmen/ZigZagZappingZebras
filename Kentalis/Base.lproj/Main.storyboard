@@ -308,13 +308,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="4X1-Bk-QKa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="4X1-Bk-QKa">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4X1-Bk-QKa" id="QIU-eV-L9l">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="w3n-C7-FBf" kind="push" trigger="accessoryAction" id="sKL-qZ-zky"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -326,7 +329,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dy-Vq-aoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="1925"/>
+            <point key="canvasLocation" x="2196" y="1935"/>
+        </scene>
+        <!--Dossier Details View Controller - Title-->
+        <scene sceneID="EyA-NF-KQ1">
+            <objects>
+                <viewController id="w3n-C7-FBf" customClass="DossierDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1D-Dt-VFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="iTs-Cc-uB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q1i-xG-DcI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Auc-Sl-W1w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukp-wb-98r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2624" y="1935"/>
         </scene>
         <!--Navigation Controller - Dossier-->
         <scene sceneID="RLd-6I-ZFA">
