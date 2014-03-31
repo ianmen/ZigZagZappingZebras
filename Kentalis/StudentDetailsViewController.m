@@ -70,8 +70,13 @@
 {
     EvaluateActivityViewController *destination = (EvaluateActivityViewController *)[segue destinationViewController];
     
-    destination.student = self.student;
-    
+    if ([segue.identifier isEqualToString:@"evaluateCurrentActivity"]) {
+        destination.student = self.student;
+        destination.activity = self.currentActivity;
+    } else if ([segue.identifier isEqualToString:@"evaluateNextActivity"]) {
+        destination.student = self.student;
+        destination.activity = self.nextActivity;
+    }
 }
 
 #pragma mark - Table view data source
