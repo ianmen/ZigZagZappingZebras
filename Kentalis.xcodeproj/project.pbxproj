@@ -25,6 +25,7 @@
 		46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */; };
 		60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60014EC818CDC943005DB276 /* Model.xcdatamodeld */; };
 		6017FCC218E1B9C700FD862F /* DossierDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */; };
+		6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039364B18E9710A00C54089 /* DossierStudentViewController.m */; };
 		6085D77518D70F0E003F2BF3 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77418D70F0E003F2BF3 /* student.png */; };
 		6085D77818D70F67003F2BF3 /* DossierTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085D77718D70F67003F2BF3 /* DossierTableViewController.m */; };
 		6085D77A18D7105D003F2BF3 /* activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77918D7105D003F2BF3 /* activity.png */; };
@@ -76,6 +77,8 @@
 		60014EC918CDC943005DB276 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6017FCC018E1B9C700FD862F /* DossierDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierDetailsViewController.h; sourceTree = "<group>"; };
 		6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierDetailsViewController.m; sourceTree = "<group>"; };
+		6039364A18E9710A00C54089 /* DossierStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierStudentViewController.h; sourceTree = "<group>"; };
+		6039364B18E9710A00C54089 /* DossierStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierStudentViewController.m; sourceTree = "<group>"; };
 		6085D77418D70F0E003F2BF3 /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
 		6085D77618D70F67003F2BF3 /* DossierTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierTableViewController.h; sourceTree = "<group>"; };
 		6085D77718D70F67003F2BF3 /* DossierTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierTableViewController.m; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				6085D77718D70F67003F2BF3 /* DossierTableViewController.m */,
 				6017FCC018E1B9C700FD862F /* DossierDetailsViewController.h */,
 				6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */,
+				6039364A18E9710A00C54089 /* DossierStudentViewController.h */,
+				6039364B18E9710A00C54089 /* DossierStudentViewController.m */,
 				46FA20DF18E1C8D800AB140B /* EvaluateActivityViewController.h */,
 				46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */,
 			);
@@ -372,6 +377,7 @@
 				60C0D1FB18CF33B2008A305B /* Observations.m in Sources */,
 				46294F8518BB553400016E8F /* AppDelegate.m in Sources */,
 				60C0D20118CF33B2008A305B /* Program.m in Sources */,
+				6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */,
 				60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */,
 				46294F8118BB553400016E8F /* main.m in Sources */,
 				60C0D1FE18CF33B2008A305B /* Student.m in Sources */,
