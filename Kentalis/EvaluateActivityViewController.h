@@ -13,8 +13,12 @@
 
 @interface EvaluateActivityViewController : UIViewController
 
-@property (strong, nonatomic) Activity *activity;
+- (IBAction)saveButtonPressed:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *evaluationSegmentedControl;
+@property (strong, nonatomic) IBOutlet UITextField *notesTextField;
+
+@property (strong, nonatomic) Activity *activity;
 @property (strong, nonatomic) Student *student;
 
 @end

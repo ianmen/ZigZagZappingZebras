@@ -182,7 +182,7 @@
                                 <rect key="frame" x="11" y="183" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eventuele opmerkingen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15Q-fh-aje">
                                 <rect key="frame" x="20" y="154" width="185" height="21"/>
@@ -193,7 +193,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mU2-sh-4mQ"/>
+                    <navigationItem key="navigationItem" id="mU2-sh-4mQ">
+                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="0EK-5i-J4o">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="8oa-dD-miG" id="3ZS-T7-fAY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="evaluationSegmentedControl" destination="QLN-Da-GWv" id="Ozu-IB-QdN"/>
+                        <outlet property="notesTextField" destination="dSq-WB-dqX" id="xnr-t4-hUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geo-xr-LaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,6 +392,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mca-qM-TrD"/>
+        <segue reference="2CQ-q2-z0Y"/>
     </inferredMetricsTieBreakers>
 </document>
