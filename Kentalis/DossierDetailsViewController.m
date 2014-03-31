@@ -23,8 +23,12 @@
         // Custom initialization
         // Instalization by searching for the assosiated activites which are belloning to this student.
         
-  
+        _observationArray = [Observations where:@{@"fromStudent": self.student}];
         
+        //Do a DISTINCT on them
+        NSArray *states = [_observationArray valueForKey:@"forActivity"];
+        _orderedSet = [NSOrderedSet orderedSetWithArray:states];
+       
     }
     return self;
 }
@@ -35,7 +39,7 @@
     // Do any additional setup after loading the view.
     
     // Set view title
-    self.title = self.student.name;
+    self.title = [NSString stringWithFormat:@"%@ - Selecteer activiteit",self.student.name];
 
     
 }
@@ -56,16 +60,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    //return [self.studentsArray count];
     
-    for(Observations *ob in self.student.observations){
-        
-        NSLog(@"%@", ob.date);
-        
-    }
-
-    return 1;
+    NSLog(@"%i", [_orderedSet count]);
+    return [_orderedSet count];
     
 }
 
@@ -78,9 +75,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    //Student *student = [self.studentsArray objectAtIndex:indexPath.row];
+    Observations *ob = [_orderedSet objectAtIndex:indexPath.row];
     
-    //cell.textLabel.text = [student name];
+    //Cast thes shit to a activity
+    Activity *ac = (Activity *)ob.forActivity;
+    
+    //Fill in the cell.
+    cell.textLabel.text = ac.title;
     
     return cell;
 }

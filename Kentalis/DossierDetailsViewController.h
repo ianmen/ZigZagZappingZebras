@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) Student *student;
 @property (strong, nonatomic) NSArray *observationArray;
+@property (strong, nonatomic) NSOrderedSet *orderedSet;
 
 
 @end
