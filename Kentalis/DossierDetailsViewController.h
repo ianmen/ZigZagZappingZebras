@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Student.h"
+#import "Observations.h"
 
-@interface DossierDetailsViewController : UIViewController
+@interface DossierDetailsViewController : UITableViewController
 
 
 @property (nonatomic, strong) Student *student;
+@property (strong, nonatomic) NSArray *observationArray;
 
 
 @end
