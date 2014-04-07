@@ -20,17 +20,47 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        // Instalization by searching for the assosiated activites which are belloning to this student.
-        
-        _observationArray = [Observations where:@{@"fromStudent": self.student}];
-        
-        //Do a DISTINCT on them
-        NSArray *states = [_observationArray valueForKey:@"forActivity"];
-        _orderedSet = [NSOrderedSet orderedSetWithArray:states];
+
        
     }
     return self;
+}
+
+-(void)loadData {
+    
+    // Custom initialization
+    // Instalization by searching for the assosiated activites which are belloning to this student.
+    
+    //Sample data create new activity
+    Activity *ac12 = [Activity create];
+    ac12.title = [NSString stringWithFormat:@"xCode opruimen"];
+    
+    
+    //Sample data create a new student
+    Observations *ob1 = [Observations create];
+    ob1.fromStudent = self.student;
+    
+    
+    //Set the ralation, multiple
+    ob1.forActivity = ac12;
+    ac12.observed = ob1;
+    
+    //Save the data
+    [ac12 save];
+    [ob1 save];
+    
+    
+    _observationArray = [Observations where:@{@"fromStudent": self.student}];
+    //NSLog(@"Array count: %i", [_observationArray count]);
+
+    //Do a DISTINCT on them
+    NSArray *states = [_observationArray valueForKey:@"forActivity"];
+    _orderedSet = [NSOrderedSet orderedSetWithArray:states];
+     //NSLog(@"Array after distinct: %i", [_orderedSet count]);
+    
+    //So the OrderdSet should only contain activities of this student with a Distinct on them.
+    
+    
 }
 
 - (void)viewDidLoad
@@ -60,8 +90,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    NSLog(@"%i", [_orderedSet count]);
+    [self loadData];
+
     return [_orderedSet count];
     
 }
@@ -75,13 +105,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Observations *ob = [_orderedSet objectAtIndex:indexPath.row];
-    
-    //Cast thes shit to a activity
-    Activity *ac = (Activity *)ob.forActivity;
+    Activity *ac23 = [_orderedSet objectAtIndex:indexPath.row];
+
     
     //Fill in the cell.
-    cell.textLabel.text = ac.title;
+    cell.textLabel.text = ac23.title;
     
     return cell;
 }

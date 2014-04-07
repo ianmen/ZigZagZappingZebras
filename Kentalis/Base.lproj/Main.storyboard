@@ -316,7 +316,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="w3n-C7-FBf" kind="push" trigger="accessoryAction" id="sKL-qZ-zky"/>
+                                    <segue destination="w3n-C7-FBf" kind="modal" id="sEC-d6-9KY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
