@@ -37,7 +37,13 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
-    
+    if ([self.transition  isEqual: @"yes"]) {
+        self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+        self.observation.comment = self.notesTextField.text;
+    } else {
+        self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+        self.observation.comment = self.notesTextField.text;
+    }
 }
 
 /*

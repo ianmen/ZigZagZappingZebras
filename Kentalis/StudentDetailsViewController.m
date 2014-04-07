@@ -73,9 +73,11 @@
     if ([segue.identifier isEqualToString:@"evaluateCurrentActivity"]) {
         destination.student = self.student;
         destination.activity = self.currentActivity;
+        destination.transition = @"no";
     } else if ([segue.identifier isEqualToString:@"evaluateNextActivity"]) {
         destination.student = self.student;
         destination.activity = self.nextActivity;
+        destination.transition = @"yes";
     }
 }
 
