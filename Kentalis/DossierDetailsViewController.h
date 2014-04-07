@@ -12,6 +12,7 @@
 
 @interface DossierDetailsViewController : UITableViewController
 
+-(void)loadData;
 
 @property (nonatomic, strong) Student *student;
 @property (strong, nonatomic) NSArray *observationArray;
