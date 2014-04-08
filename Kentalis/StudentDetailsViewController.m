@@ -87,7 +87,7 @@
         self.nextActivity = self.tempProgram.fromActivity;
         
         // Set new content of the activity cells
-        self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.nextActivity.title];
+        self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
         self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
     }
 }

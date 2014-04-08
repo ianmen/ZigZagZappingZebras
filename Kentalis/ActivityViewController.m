@@ -203,7 +203,6 @@
 
     }
     
-    
     //Load them in array
     self.activtyArray = [Activity all];
     
