@@ -73,7 +73,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8oa-dD-miG" kind="push" identifier="evaluateCurrentActivity" id="2CQ-q2-z0Y"/>
+                                            <segue destination="8oa-dD-miG" kind="modal" identifier="evaluateCurrentActivity" id="2CQ-q2-z0Y"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CwO-4U-e22" style="IBUITableViewCellStyleDefault" id="RnE-ZG-EMZ">
@@ -93,7 +93,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8oa-dD-miG" kind="push" identifier="evaluateNextActivity" id="mca-qM-TrD"/>
+                                            <segue destination="8oa-dD-miG" kind="modal" identifier="evaluateNextActivity" id="mca-qM-TrD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="9Ev-BO-WnV" style="IBUITableViewCellStyleDefault" id="g28-MH-dQR">
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QLN-Da-GWv">
-                                <rect key="frame" x="11" y="107" width="289" height="29"/>
+                                <rect key="frame" x="16" y="71" width="289" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Slaap"/>
@@ -172,33 +172,39 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alertheid tijdens activiteit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tH-jS-qBL">
-                                <rect key="frame" x="20" y="78" width="280" height="21"/>
+                                <rect key="frame" x="20" y="42" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-WB-dqX">
-                                <rect key="frame" x="11" y="183" width="289" height="30"/>
+                                <rect key="frame" x="16" y="156" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eventuele opmerkingen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15Q-fh-aje">
-                                <rect key="frame" x="20" y="154" width="185" height="21"/>
+                                <rect key="frame" x="20" y="127" width="185" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TX-nh-HkA">
+                                <rect key="frame" x="20" y="194" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Opslaan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="8oa-dD-miG" eventType="touchUpInside" id="8Mb-4P-4H1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mU2-sh-4mQ">
-                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="0EK-5i-J4o">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="8oa-dD-miG" id="3ZS-T7-fAY"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="0EK-5i-J4o"/>
                     </navigationItem>
                     <connections>
                         <outlet property="evaluationSegmentedControl" destination="QLN-Da-GWv" id="Ozu-IB-QdN"/>
