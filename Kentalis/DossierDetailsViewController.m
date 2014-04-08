@@ -9,6 +9,7 @@
 #import "DossierDetailsViewController.h"
 #import "Observations.h"
 #import "Activity.h"
+#import "DossierOverviewViewController.h"
 
 @interface DossierDetailsViewController ()
 
@@ -48,6 +49,8 @@
     //Save the data
     [ac12 save];
     [ob1 save];
+    
+    // ------
     
     
     _observationArray = [Observations where:@{@"fromStudent": self.student}];
@@ -112,6 +115,23 @@
     cell.textLabel.text = ac23.title;
     
     return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    //Load in the new detail view controller of the dossier
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    Activity *ac23 = [_orderedSet objectAtIndex:indexPath.row];
+    
+    DossierOverviewViewController *destination = (DossierOverviewViewController *)[segue destinationViewController];
+    
+    //Set the student of the destination view controllerer
+    destination.student = self.student;
+    destination.activity = ac23;
+    destination.observations = _observationArray;
+    
 }
 
 @end
