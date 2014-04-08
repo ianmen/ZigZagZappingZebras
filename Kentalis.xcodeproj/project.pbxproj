@@ -24,6 +24,7 @@
 		46C2D3EB18CF3B780001372A /* StudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C2D3EA18CF3B780001372A /* StudentsViewController.m */; };
 		46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */; };
 		60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60014EC818CDC943005DB276 /* Model.xcdatamodeld */; };
+		60055A4518F40A4400DAFEFA /* DossierOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60055A4418F40A4400DAFEFA /* DossierOverviewViewController.m */; };
 		6017FCC218E1B9C700FD862F /* DossierDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */; };
 		6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039364B18E9710A00C54089 /* DossierStudentViewController.m */; };
 		6085D77518D70F0E003F2BF3 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77418D70F0E003F2BF3 /* student.png */; };
@@ -75,6 +76,8 @@
 		46FA20DF18E1C8D800AB140B /* EvaluateActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluateActivityViewController.h; sourceTree = "<group>"; };
 		46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluateActivityViewController.m; sourceTree = "<group>"; };
 		60014EC918CDC943005DB276 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		60055A4318F40A4400DAFEFA /* DossierOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierOverviewViewController.h; sourceTree = "<group>"; };
+		60055A4418F40A4400DAFEFA /* DossierOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierOverviewViewController.m; sourceTree = "<group>"; };
 		6017FCC018E1B9C700FD862F /* DossierDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierDetailsViewController.h; sourceTree = "<group>"; };
 		6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierDetailsViewController.m; sourceTree = "<group>"; };
 		6039364A18E9710A00C54089 /* DossierStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierStudentViewController.h; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		46294F6818BB553400016E8F = {
 			isa = PBXGroup;
 			children = (
+				60055A4318F40A4400DAFEFA /* DossierOverviewViewController.h */,
+				60055A4418F40A4400DAFEFA /* DossierOverviewViewController.m */,
 				60014EC818CDC943005DB276 /* Model.xcdatamodeld */,
 				46294F7A18BB553400016E8F /* Kentalis */,
 				46294F9918BB553400016E8F /* KentalisTests */,
@@ -377,6 +382,7 @@
 				60C0D1FB18CF33B2008A305B /* Observations.m in Sources */,
 				46294F8518BB553400016E8F /* AppDelegate.m in Sources */,
 				60C0D20118CF33B2008A305B /* Program.m in Sources */,
+				60055A4518F40A4400DAFEFA /* DossierOverviewViewController.m in Sources */,
 				6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */,
 				60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */,
 				46294F8118BB553400016E8F /* main.m in Sources */,
