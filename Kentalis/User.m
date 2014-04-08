@@ -2,7 +2,7 @@
 //  User.m
 //  Kentalis
 //
-//  Created by Bob Van hees on 11-03-14.
+//  Created by Lars van Beek on 08/04/14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
