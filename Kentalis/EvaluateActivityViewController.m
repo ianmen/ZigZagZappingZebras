@@ -37,13 +37,28 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
+    
+    self.user.name = @"Lars van Beek";
+    
     if ([self.transition  isEqual: @"yes"]) {
         self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
         self.observation.comment = self.notesTextField.text;
+        self.observation.forActivity = self.activity;
+        self.observation.fromStudent = self.student;
+        self.observation.byUser = self.user;
+        
+        self.student.observations = self.observation;
     } else {
         self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
         self.observation.comment = self.notesTextField.text;
+        self.observation.forActivity = self.activity;
+        self.observation.fromStudent = self.student;
+        self.observation.byUser = self.user;
+        
+        self.student.observations = self.observation;
     }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "Activity.h"
 #import "Student.h"
 #import "Observations.h"
+#import "User.h"
 
 #import <UIKit/UIKit.h>
 
@@ -19,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *evaluationSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *notesTextField;
 
+@property (strong, nonatomic) User *user;
 @property (strong, nonatomic) Activity *activity;
 @property (strong, nonatomic) Student *student;
 @property (strong, nonatomic) Observations *observation;
