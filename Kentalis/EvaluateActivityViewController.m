@@ -48,8 +48,6 @@
         observation.fromStudent = self.student;
         observation.byUser = self.user;
         [observation save];
-        
-        //self.student.observations = self.observation;
     } else {
         Observations *observation = [Observations create];
         observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
@@ -58,8 +56,6 @@
         observation.fromStudent = self.student;
         observation.byUser = self.user;
         [observation save];
-        
-        //self.student.observations = self.observation;
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -38,18 +38,18 @@
     
     // Get program for current day
     self.program = [Program where:@{ @"dayWeek" : dayOfWeek }];
-    NSEnumerator *enumerator = self.program.objectEnumerator;
+    self.enumerator = self.program.objectEnumerator;
     
     // Get the first activity of the program
-    Program *tempProgram = enumerator.nextObject;
-    self.currentActivity = tempProgram.fromActivity;
+    self.tempProgram = self.enumerator.nextObject;
+    self.currentActivity = self.tempProgram.fromActivity;
     
     // Set program dependent cell content
     self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
     
     // Get next activity for transition cell
-    tempProgram = enumerator.nextObject;
-    self.nextActivity = tempProgram.fromActivity;
+    self.tempProgram = self.enumerator.nextObject;
+    self.nextActivity = self.tempProgram.fromActivity;
     
     self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
     
@@ -78,6 +78,17 @@
         destination.student = self.student;
         destination.activity = self.nextActivity;
         destination.transition = @"yes";
+        
+        // Set the new current activity
+        self.currentActivity = self.nextActivity;
+        
+        // Get the new next activity
+        self.tempProgram = self.enumerator.nextObject;
+        self.nextActivity = self.tempProgram.fromActivity;
+        
+        // Set new content of the activity cells
+        self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.nextActivity.title];
+        self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
     }
 }
 
