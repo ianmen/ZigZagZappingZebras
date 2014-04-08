@@ -54,12 +54,13 @@
     
     
     _observationArray = [Observations where:@{@"fromStudent": self.student}];
-    //NSLog(@"Array count: %i", [_observationArray count]);
+    NSLog(@"For student: %@", self.student.name);
+    NSLog(@"Array count: %i", [_observationArray count]);
 
     //Do a DISTINCT on them
     NSArray *states = [_observationArray valueForKey:@"forActivity"];
     _orderedSet = [NSOrderedSet orderedSetWithArray:states];
-     //NSLog(@"Array after distinct: %i", [_orderedSet count]);
+     NSLog(@"Array after distinct: %i", [_orderedSet count]);
     
     //So the OrderdSet should only contain activities of this student with a Distinct on them.
     
@@ -129,8 +130,8 @@
     
     //Set the student of the destination view controllerer
     destination.student = self.student;
-    destination.activity = ac23;
-    destination.observations = _observationArray;
+    destination.ac1 = ac23;
+    destination.observation = _observationArray;
     
 }
 
