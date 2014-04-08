@@ -23,7 +23,6 @@
 @property (strong, nonatomic) User *user;
 @property (strong, nonatomic) Activity *activity;
 @property (strong, nonatomic) Student *student;
-@property (strong, nonatomic) Observations *observation;
 
 @property (strong, nonatomic) NSString *transition;
 

@@ -41,20 +41,24 @@
     self.user.name = @"Lars van Beek";
     
     if ([self.transition  isEqual: @"yes"]) {
-        self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-        self.observation.comment = self.notesTextField.text;
-        self.observation.forActivity = self.activity;
-        self.observation.fromStudent = self.student;
-        self.observation.byUser = self.user;
-        NSLog(@"%@", self.observation.fromStudent.name);
+        Observations *observation = [Observations create];
+        observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+        observation.comment = self.notesTextField.text;
+        observation.forActivity = self.activity;
+        observation.fromStudent = self.student;
+        observation.byUser = self.user;
+        [observation save];
+        
         //self.student.observations = self.observation;
     } else {
-        self.observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-        self.observation.comment = self.notesTextField.text;
-        self.observation.forActivity = self.activity;
-        self.observation.fromStudent = self.student;
-        self.observation.byUser = self.user;
-        NSLog(@"%@", self.observation.fromStudent.name);
+        Observations *observation = [Observations create];
+        observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+        observation.comment = self.notesTextField.text;
+        observation.forActivity = self.activity;
+        observation.fromStudent = self.student;
+        observation.byUser = self.user;
+        [observation save];
+        
         //self.student.observations = self.observation;
     }
     
