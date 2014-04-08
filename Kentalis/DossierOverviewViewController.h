@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Student.h"
 #import "Activity.h"
+#import "JBBarChartView.h"
+#import "JBChartView.h"
+#import "JBLineChartView.h"
 
 
-@interface DossierOverviewViewController : UIViewController
+@interface DossierOverviewViewController : UIViewController<JBBarChartViewDataSource,JBBarChartViewDelegate>
 
 
 @property(nonatomic, strong) Student *student;

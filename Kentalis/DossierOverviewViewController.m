@@ -7,6 +7,8 @@
 //
 
 #import "DossierOverviewViewController.h"
+#import "DSBarChart.h"
+
 
 @interface DossierOverviewViewController ()
 
@@ -27,7 +29,28 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    JBBarChartView *barChartView = [[JBBarChartView alloc] init];
+    barChartView.delegate = self;
+    barChartView.dataSource = self;
+    [self.view addSubview:barChartView];
+    
+    barChartView.frame = CGRectMake(5, 5, 315, 50);
+    [barChartView reloadData];
+    
+
 }
+
+- (NSInteger)numberOfBarsInBarChartView:(JBBarChartView *)barChartView
+{
+    return 10;
+}
+
+- (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtAtIndex:(NSInteger)index
+{
+    return 100;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

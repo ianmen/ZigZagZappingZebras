@@ -1,15 +1,18 @@
 PODS:
   - DSBarChart (0.4.0)
+  - JBChartView (2.1.3)
   - ObjectiveRecord (1.4.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - DSBarChart (~> 0.4.0)
+  - JBChartView (~> 2.1.3)
   - ObjectiveRecord (~> 1.4)
 
 SPEC CHECKSUMS:
   DSBarChart: c511201b27fd5c3f4ced648729d040033f2f8274
+  JBChartView: 7e035461098548a987ade1e9de74883e46923bf5
   ObjectiveRecord: 109a6c583284c2c9af1dc0d6ccc1dfc84e826c45
   ObjectiveSugar: fed588577bcf9733546aeaa089de444e4bab9a52
 
