@@ -27,7 +27,13 @@
 		60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60014EC818CDC943005DB276 /* Model.xcdatamodeld */; };
 		6017FCC218E1B9C700FD862F /* DossierDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */; };
 		6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039364B18E9710A00C54089 /* DossierStudentViewController.m */; };
+		603ABA4118FBDCCC00C095D7 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA3C18FBDCCC00C095D7 /* JBBarChartFooterView.m */; };
+		603ABA4318FBDCCC00C095D7 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4018FBDCCC00C095D7 /* JBChartHeaderView.m */; };
+		603ABA4618FBDD0100C095D7 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4518FBDD0100C095D7 /* JBChartInformationView.m */; };
+		603ABA4918FBDE6A00C095D7 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4818FBDE6A00C095D7 /* JBLineChartFooterView.m */; };
+		603ABA4C18FBE8BE00C095D7 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4B18FBE8BE00C095D7 /* JBChartTooltipView.m */; };
 		6052F74418F415EB00BEBA42 /* DossierOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052F74318F415EB00BEBA42 /* DossierOverviewViewController.m */; };
+		606BD58A18FD41D3006BAFD0 /* DossierStudent2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */; };
 		6085D77518D70F0E003F2BF3 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77418D70F0E003F2BF3 /* student.png */; };
 		6085D77818D70F67003F2BF3 /* DossierTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085D77718D70F67003F2BF3 /* DossierTableViewController.m */; };
 		6085D77A18D7105D003F2BF3 /* activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77918D7105D003F2BF3 /* activity.png */; };
@@ -82,8 +88,25 @@
 		6017FCC118E1B9C700FD862F /* DossierDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierDetailsViewController.m; sourceTree = "<group>"; };
 		6039364A18E9710A00C54089 /* DossierStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierStudentViewController.h; sourceTree = "<group>"; };
 		6039364B18E9710A00C54089 /* DossierStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierStudentViewController.m; sourceTree = "<group>"; };
+		603ABA3B18FBDCCC00C095D7 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
+		603ABA3C18FBDCCC00C095D7 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
+		603ABA3F18FBDCCC00C095D7 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartHeaderView.h; sourceTree = "<group>"; };
+		603ABA4018FBDCCC00C095D7 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartHeaderView.m; sourceTree = "<group>"; };
+		603ABA4418FBDD0100C095D7 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartInformationView.h; sourceTree = "<group>"; };
+		603ABA4518FBDD0100C095D7 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartInformationView.m; sourceTree = "<group>"; };
+		603ABA4718FBDE6A00C095D7 /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
+		603ABA4818FBDE6A00C095D7 /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
+		603ABA4A18FBE8BE00C095D7 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
+		603ABA4B18FBE8BE00C095D7 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
+		6049790D18F429E900EB8954 /* JBColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
+		6049790E18F429E900EB8954 /* JBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
+		6049790F18F429E900EB8954 /* JBFontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
+		6049791018F429E900EB8954 /* JBStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
+		6049791118F429E900EB8954 /* JBUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		6052F74218F415EB00BEBA42 /* DossierOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierOverviewViewController.h; sourceTree = "<group>"; };
 		6052F74318F415EB00BEBA42 /* DossierOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierOverviewViewController.m; sourceTree = "<group>"; };
+		606BD58818FD41D3006BAFD0 /* DossierStudent2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierStudent2TableViewController.h; sourceTree = "<group>"; };
+		606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierStudent2TableViewController.m; sourceTree = "<group>"; };
 		6085D77418D70F0E003F2BF3 /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
 		6085D77618D70F67003F2BF3 /* DossierTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierTableViewController.h; sourceTree = "<group>"; };
 		6085D77718D70F67003F2BF3 /* DossierTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierTableViewController.m; sourceTree = "<group>"; };
@@ -130,6 +153,7 @@
 		46294F6818BB553400016E8F = {
 			isa = PBXGroup;
 			children = (
+				6049790C18F429D900EB8954 /* Constants */,
 				60014EC818CDC943005DB276 /* Model.xcdatamodeld */,
 				46294F7A18BB553400016E8F /* Kentalis */,
 				46294F9918BB553400016E8F /* KentalisTests */,
@@ -171,6 +195,8 @@
 				46294F8318BB553400016E8F /* AppDelegate.h */,
 				46294F8418BB553400016E8F /* AppDelegate.m */,
 				46294F8618BB553400016E8F /* Main.storyboard */,
+				606BD58818FD41D3006BAFD0 /* DossierStudent2TableViewController.h */,
+				606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */,
 				602EB7A418CDD17200318B20 /* Entity */,
 				46294F8C18BB553400016E8F /* Images.xcassets */,
 				46294F7B18BB553400016E8F /* Supporting Files */,
@@ -236,6 +262,28 @@
 				46F390DD18F4144300EE3D91 /* User.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		6049790C18F429D900EB8954 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6049790D18F429E900EB8954 /* JBColorConstants.h */,
+				6049790E18F429E900EB8954 /* JBConstants.h */,
+				6049790F18F429E900EB8954 /* JBFontConstants.h */,
+				6049791018F429E900EB8954 /* JBStringConstants.h */,
+				6049791118F429E900EB8954 /* JBUIConstants.h */,
+				603ABA3B18FBDCCC00C095D7 /* JBBarChartFooterView.h */,
+				603ABA3C18FBDCCC00C095D7 /* JBBarChartFooterView.m */,
+				603ABA3F18FBDCCC00C095D7 /* JBChartHeaderView.h */,
+				603ABA4018FBDCCC00C095D7 /* JBChartHeaderView.m */,
+				603ABA4418FBDD0100C095D7 /* JBChartInformationView.h */,
+				603ABA4518FBDD0100C095D7 /* JBChartInformationView.m */,
+				603ABA4718FBDE6A00C095D7 /* JBLineChartFooterView.h */,
+				603ABA4818FBDE6A00C095D7 /* JBLineChartFooterView.m */,
+				603ABA4A18FBE8BE00C095D7 /* JBChartTooltipView.h */,
+				603ABA4B18FBE8BE00C095D7 /* JBChartTooltipView.m */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C2D3EB18CF3B780001372A /* StudentsViewController.m in Sources */,
+				603ABA4C18FBE8BE00C095D7 /* JBChartTooltipView.m in Sources */,
+				606BD58A18FD41D3006BAFD0 /* DossierStudent2TableViewController.m in Sources */,
 				464FC65418D86E7000BC3326 /* StudentDetailsViewController.m in Sources */,
 				6085D77818D70F67003F2BF3 /* DossierTableViewController.m in Sources */,
 				6017FCC218E1B9C700FD862F /* DossierDetailsViewController.m in Sources */,
@@ -381,7 +431,10 @@
 				46F390DE18F4144300EE3D91 /* User.m in Sources */,
 				60C0D1FB18CF33B2008A305B /* Observations.m in Sources */,
 				46294F8518BB553400016E8F /* AppDelegate.m in Sources */,
+				603ABA4118FBDCCC00C095D7 /* JBBarChartFooterView.m in Sources */,
 				60C0D20118CF33B2008A305B /* Program.m in Sources */,
+				603ABA4918FBDE6A00C095D7 /* JBLineChartFooterView.m in Sources */,
+				603ABA4618FBDD0100C095D7 /* JBChartInformationView.m in Sources */,
 				6052F74418F415EB00BEBA42 /* DossierOverviewViewController.m in Sources */,
 				6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */,
 				60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */,
@@ -389,6 +442,7 @@
 				60C0D1FE18CF33B2008A305B /* Student.m in Sources */,
 				46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */,
 				60FAB1BE18CF3F6D0037E95C /* ActivityViewController.m in Sources */,
+				603ABA4318FBDCCC00C095D7 /* JBChartHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kentalis/Kentalis-Prefix.pch";
 				INFOPLIST_FILE = "Kentalis/Kentalis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -533,6 +588,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kentalis/Kentalis-Prefix.pch";
 				INFOPLIST_FILE = "Kentalis/Kentalis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

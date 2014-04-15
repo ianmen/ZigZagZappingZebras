@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggw-XT-WaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2570" y="1935"/>
+            <point key="canvasLocation" x="3066" y="1047"/>
         </scene>
         <!--Dossier Table View Controller - Selecteer student-->
         <scene sceneID="qkC-LB-EwS">
@@ -316,15 +316,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="4X1-Bk-QKa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" id="4X1-Bk-QKa">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4X1-Bk-QKa" id="QIU-eV-L9l">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0Cm-vz-96q" kind="push" id="5AG-lT-Wkh"/>
+                                    <segue destination="PiD-1R-FeV" kind="push" trigger="accessoryAction" id="iWf-Zx-g6Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -338,6 +338,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dy-Vq-aoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2196" y="1935"/>
+        </scene>
+        <!--Dossier Student2 Table View Controller - Overview-->
+        <scene sceneID="NQy-G1-ipI">
+            <objects>
+                <tableViewController id="PiD-1R-FeV" customClass="DossierStudent2TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ru9-uc-gbY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="table" id="lZW-tE-vkp">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lZW-tE-vkp" id="TrK-9f-r9M">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PiD-1R-FeV" id="4ia-fs-fTZ"/>
+                            <outlet property="delegate" destination="PiD-1R-FeV" id="509-Iy-0I9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Overview" id="taf-Ma-Gd9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wam-zf-wSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767" y="1717"/>
         </scene>
         <!--Navigation Controller - Dossier-->
         <scene sceneID="RLd-6I-ZFA">
