@@ -37,7 +37,9 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
-    self.user.name = @"Lars van Beek";
+    
+    NSArray *user = [User where:@"name == 'Lars van Beek'"];
+    User *userLars = user[0];
 
     Observations *observation = [Observations create];
     observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
@@ -45,7 +47,7 @@
     observation.date = [NSDate date];
     observation.forActivity = self.activity;
     observation.fromStudent = self.student;
-    observation.byUser = self.user;
+    observation.byUser = userLars;
     [observation save];
     
     [self dismissViewControllerAnimated:YES completion:nil];
