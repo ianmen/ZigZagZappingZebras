@@ -25,27 +25,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
-        slaap = 0;
-        doezelig = 0;
-        alert = 0;
-        hoogalert = 0;
-        stress = 0;
-        
-        
-        //Do a for each for all the observations
-        for (Observations *ob in _observation) {
-            
-            
-            if(ob.altertness.intValue == 0) slaap++;
-            if(ob.altertness.intValue == 1) doezelig++;
-            if(ob.altertness.intValue == 2) alert++;
-            if(ob.altertness.intValue == 3) hoogalert++;
-            if(ob.altertness.intValue == 4) stress++;
-
-                
-        }
-    }
+            }
     return self;
 }
 
@@ -86,6 +66,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"table" forIndexPath:indexPath];
+    
+    // Custom initialization
+    slaap = 0;
+    doezelig = 0;
+    alert = 0;
+    hoogalert = 0;
+    stress = 0;
+    
+    
+    //Do a for each for all the observations
+    for (Observations *ob in _observation) {
+        
+        
+        if(ob.altertness.intValue == 0) slaap++;
+        if(ob.altertness.intValue == 1) doezelig++;
+        if(ob.altertness.intValue == 2) alert++;
+        if(ob.altertness.intValue == 3) hoogalert++;
+        if(ob.altertness.intValue == 4) stress++;
+        
+        
+    }
+
     
     // Configure the cell's
     // Slaap

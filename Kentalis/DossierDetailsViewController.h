@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Student.h"
 #import "Observations.h"
+#import "Activity.h"
 
 @interface DossierDetailsViewController : UITableViewController
 
@@ -17,6 +18,6 @@
 @property (nonatomic, strong) Student *student;
 @property (strong, nonatomic) NSArray *observationArray;
 @property (strong, nonatomic) NSOrderedSet *orderedSet;
-
+@property (strong, nonatomic) Activity *ac23;
 
 @end

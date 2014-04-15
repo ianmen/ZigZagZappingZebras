@@ -10,6 +10,7 @@
 #import "Observations.h"
 #import "Activity.h"
 #import "DossierOverviewViewController.h"
+#import "DossierStudent2TableViewController.h"
 
 @interface DossierDetailsViewController ()
 
@@ -34,15 +35,9 @@
     
     
     _observationArray = [Observations where:@{@"fromStudent": self.student}];
-    NSLog(@"%@", _observationArray);
-    NSLog(@"For student: %@", self.student.name);
-    NSLog(@"Array count: %i", [[Observations all] count]);
-    NSLog(@"Total Array count: %@", [Observations where:@{@"fromStudent": self.student}]);
-    
-    for (Observations *key in [Observations all]){
-        NSLog(@"Student name: %@", key);
-    }
 
+    
+    
 
     //Do a DISTINCT on them
     NSArray *states = [_observationArray valueForKey:@"forActivity"];
@@ -96,11 +91,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Activity *ac23 = [_orderedSet objectAtIndex:indexPath.row];
+    _ac23 = [_orderedSet objectAtIndex:indexPath.row];
 
     
     //Fill in the cell.
-    cell.textLabel.text = ac23.title;
+    cell.textLabel.text = _ac23.title;
     
     return cell;
 }
@@ -111,13 +106,24 @@
     
     //Load in the new detail view controller of the dossier
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    Activity *ac23 = [_orderedSet objectAtIndex:indexPath.row];
     
-    DossierOverviewViewController *destination = (DossierOverviewViewController *)[segue destinationViewController];
+    NSLog(@"The index number: %i",indexPath.row);
+    _ac23 = [_orderedSet objectAtIndex:indexPath.row];
+    
+    DossierStudent2TableViewController *destination = (DossierStudent2TableViewController *)[segue destinationViewController];
     
     //Set the student of the destination view controllerer
     destination.student = self.student;
-    destination.ac1 = ac23;
+    destination.ac1 = self.ac23;
+    
+    
+    NSLog(@"Activity name: %@", self.ac23.title);
+    _observationArray = [Observations where:@{@"fromStudent": self.student,
+                                              @"forActivity": self.ac23}];
+    
+
+    
+    
     destination.observation = _observationArray;
     
 }

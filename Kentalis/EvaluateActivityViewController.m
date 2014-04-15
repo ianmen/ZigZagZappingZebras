@@ -38,17 +38,36 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     
+    //Creation of the user
     NSArray *user = [User where:@"name == 'Lars van Beek'"];
     User *userLars = user[0];
+    
+    NSManagedObjectContext *context = [CoreDataManager sharedManager].managedObjectContext;
+    Observations *ob1 = [NSEntityDescription
+                                      insertNewObjectForEntityForName:@"Observations"
+                                      inManagedObjectContext:context];
+    ob1.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+    ob1.comment = self.notesTextField.text;
+    ob1.date = [NSDate date];
+    ob1.forActivity = self.activity;
+    ob1.fromStudent = self.student;
+    ob1.byUser = userLars;
 
-    Observations *observation = [Observations create];
-    observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-    observation.comment = self.notesTextField.text;
-    observation.date = [NSDate date];
-    observation.forActivity = self.activity;
-    observation.fromStudent = self.student;
-    observation.byUser = userLars;
-    [observation save];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+//    
+//    Observations *observation = [Observations create];
+//    observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+//    observation.comment = self.notesTextField.text;
+//    observation.date = [NSDate date];
+//    observation.forActivity = self.activity;
+//    observation.fromStudent = self.student;
+//    observation.byUser = userLars;
+//    [observation save];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

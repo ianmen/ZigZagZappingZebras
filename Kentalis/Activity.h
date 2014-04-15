@@ -13,7 +13,7 @@
 
 @interface Activity : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) Observations *observed;
 @property (nonatomic, retain) Program *inProgram;
 
