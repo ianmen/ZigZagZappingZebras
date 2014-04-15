@@ -20,7 +20,6 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *evaluationSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *notesTextField;
 
-@property (strong, nonatomic) User *user;
 @property (strong, nonatomic) Activity *activity;
 @property (strong, nonatomic) Student *student;
 

@@ -10,6 +10,7 @@
 #import "StudentDetailsViewController.h"
 
 #import "Student.h"
+#import "User.h"
 
 @interface StudentsViewController ()
 
@@ -30,6 +31,16 @@
 {
     // Define the model
     [CoreDataManager sharedManager].modelName = @"Model";
+    
+    NSArray *users = [User all];
+
+    if (users.count == 0) {
+        User *user = [User create];
+        user.name = @"Lars van Beek";
+        [user save];
+        
+        NSLog(@"User created (first app login)");
+    }
     
     [super viewDidLoad];
     
