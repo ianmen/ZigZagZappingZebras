@@ -37,26 +37,16 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
-    
     self.user.name = @"Lars van Beek";
-    
-    if ([self.transition  isEqual: @"yes"]) {
-        Observations *observation = [Observations create];
-        observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-        observation.comment = self.notesTextField.text;
-        observation.forActivity = self.activity;
-        observation.fromStudent = self.student;
-        observation.byUser = self.user;
-        [observation save];
-    } else {
-        Observations *observation = [Observations create];
-        observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-        observation.comment = self.notesTextField.text;
-        observation.forActivity = self.activity;
-        observation.fromStudent = self.student;
-        observation.byUser = self.user;
-        [observation save];
-    }
+
+    Observations *observation = [Observations create];
+    observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+    observation.comment = self.notesTextField.text;
+    observation.date = [NSDate date];
+    observation.forActivity = self.activity;
+    observation.fromStudent = self.student;
+    observation.byUser = self.user;
+    [observation save];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

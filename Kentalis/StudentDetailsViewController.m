@@ -73,11 +73,9 @@
     if ([segue.identifier isEqualToString:@"evaluateCurrentActivity"]) {
         destination.student = self.student;
         destination.activity = self.currentActivity;
-        destination.transition = @"no";
     } else if ([segue.identifier isEqualToString:@"evaluateNextActivity"]) {
         destination.student = self.student;
         destination.activity = self.nextActivity;
-        destination.transition = @"yes";
         
         // Set the new current activity
         self.currentActivity = self.nextActivity;
@@ -86,9 +84,21 @@
         self.tempProgram = self.enumerator.nextObject;
         self.nextActivity = self.tempProgram.fromActivity;
         
-        // Set new content of the activity cells
-        self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
-        self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
+        if (self.nextActivity == NULL) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            
+            // Disable the rotating cell
+            cell.userInteractionEnabled = NO;
+            
+            // Set new content of the activity cells
+            self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
+            self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Dit was de laatste activiteit"];
+        } else {
+            // Set new content of the activity cells
+            self.activityCellLabel.text = [NSString stringWithFormat:@"Activiteit: %@", self.currentActivity.title];
+            self.transitionToActivityLabel.text = [NSString stringWithFormat:@"Overgang naar: %@", self.nextActivity.title];
+        }
     }
 }
 
