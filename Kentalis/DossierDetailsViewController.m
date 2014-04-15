@@ -32,30 +32,17 @@
     // Custom initialization
     // Instalization by searching for the assosiated activites which are belloning to this student.
     
-    //Sample data create new activity
-    Activity *ac12 = [Activity create];
-    ac12.title = [NSString stringWithFormat:@"xCode opruimen"];
-    
-    
-    //Sample data create a new student
-    Observations *ob1 = [Observations create];
-    ob1.fromStudent = self.student;
-    
-    
-    //Set the ralation, multiple
-    ob1.forActivity = ac12;
-    ac12.observed = ob1;
-    
-    //Save the data
-    [ac12 save];
-    [ob1 save];
-    
-    // ------
-    
     
     _observationArray = [Observations where:@{@"fromStudent": self.student}];
+    NSLog(@"%@", _observationArray);
     NSLog(@"For student: %@", self.student.name);
-    NSLog(@"Array count: %i", [_observationArray count]);
+    NSLog(@"Array count: %i", [[Observations all] count]);
+    NSLog(@"Total Array count: %@", [Observations where:@{@"fromStudent": self.student}]);
+    
+    for (Observations *key in [Observations all]){
+        NSLog(@"Student name: %@", key);
+    }
+
 
     //Do a DISTINCT on them
     NSArray *states = [_observationArray valueForKey:@"forActivity"];
