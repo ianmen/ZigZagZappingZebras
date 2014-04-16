@@ -73,6 +73,8 @@
     if ([segue.identifier isEqualToString:@"evaluateCurrentActivity"]) {
         destination.student = self.student;
         destination.activity = self.currentActivity;
+    } else if ([segue.identifier isEqualToString:@"evaluateOtherActivity"]) {
+        destination.student = self.student;
     } else if ([segue.identifier isEqualToString:@"evaluateNextActivity"]) {
         destination.student = self.student;
         destination.activity = self.nextActivity;

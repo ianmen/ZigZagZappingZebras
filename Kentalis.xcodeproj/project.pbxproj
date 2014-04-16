@@ -22,6 +22,7 @@
 		46294FA018BB553400016E8F /* KentalisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46294F9F18BB553400016E8F /* KentalisTests.m */; };
 		464FC65418D86E7000BC3326 /* StudentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464FC65318D86E7000BC3326 /* StudentDetailsViewController.m */; };
 		46C2D3EB18CF3B780001372A /* StudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C2D3EA18CF3B780001372A /* StudentsViewController.m */; };
+		46D1F6C518FE96AF00EAE81A /* EvaluateOtherActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F6C418FE96AF00EAE81A /* EvaluateOtherActivityViewController.m */; };
 		46F390DE18F4144300EE3D91 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F390DD18F4144300EE3D91 /* User.m */; };
 		46FA20E118E1C8D800AB140B /* EvaluateActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FA20E018E1C8D800AB140B /* EvaluateActivityViewController.m */; };
 		60014ECA18CDC943005DB276 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60014EC818CDC943005DB276 /* Model.xcdatamodeld */; };
@@ -79,6 +80,8 @@
 		464FC65318D86E7000BC3326 /* StudentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailsViewController.m; sourceTree = "<group>"; };
 		46C2D3E918CF3B780001372A /* StudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsViewController.h; sourceTree = "<group>"; };
 		46C2D3EA18CF3B780001372A /* StudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsViewController.m; sourceTree = "<group>"; };
+		46D1F6C318FE96AF00EAE81A /* EvaluateOtherActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluateOtherActivityViewController.h; sourceTree = "<group>"; };
+		46D1F6C418FE96AF00EAE81A /* EvaluateOtherActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluateOtherActivityViewController.m; sourceTree = "<group>"; };
 		46F390DC18F4144300EE3D91 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		46F390DD18F4144300EE3D91 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		46FA20DF18E1C8D800AB140B /* EvaluateActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluateActivityViewController.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 		46294F7A18BB553400016E8F /* Kentalis */ = {
 			isa = PBXGroup;
 			children = (
+				46D1F6C318FE96AF00EAE81A /* EvaluateOtherActivityViewController.h */,
+				46D1F6C418FE96AF00EAE81A /* EvaluateOtherActivityViewController.m */,
 				464FC65218D86E7000BC3326 /* StudentDetailsViewController.h */,
 				464FC65318D86E7000BC3326 /* StudentDetailsViewController.m */,
 				6085D77418D70F0E003F2BF3 /* student.png */,
@@ -432,6 +437,7 @@
 				60C0D1FB18CF33B2008A305B /* Observations.m in Sources */,
 				46294F8518BB553400016E8F /* AppDelegate.m in Sources */,
 				603ABA4118FBDCCC00C095D7 /* JBBarChartFooterView.m in Sources */,
+				46D1F6C518FE96AF00EAE81A /* EvaluateOtherActivityViewController.m in Sources */,
 				60C0D20118CF33B2008A305B /* Program.m in Sources */,
 				603ABA4918FBDE6A00C095D7 /* JBLineChartFooterView.m in Sources */,
 				603ABA4618FBDD0100C095D7 /* JBChartInformationView.m in Sources */,
