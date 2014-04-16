@@ -31,6 +31,11 @@
     [self.activityPickerVIew selectRow:6 inComponent:0 animated:NO];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
