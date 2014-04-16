@@ -80,32 +80,33 @@
 {
     [self loadData];
     
-    return [_observationArray count];
+    return [_orderedSet count];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"reusableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    _obj1 = [_observationArray objectAtIndex:indexPath.row];
+    NSLog(@"Index: %i", indexPath.row);
+    _obj1 = [_orderedSet objectAtIndex:indexPath.row];
     
     
     //Fill in the cell.
    
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy"];
+    [formatter setDateFormat:@"cccc-dd-LLLL-yyyy"];
     
     //Optionally for time zone converstions
-    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"nl_NL"]];
     
-    NSString *stringFromDate = [formatter stringFromDate:_obj1.date];
+    NSString *stringFromDate = [formatter stringFromDate:_obj1];
     
     cell.textLabel.text = stringFromDate;
     
@@ -132,7 +133,7 @@
     
     _observationArray = [Observations where:@{@"fromStudent": self.student,
                                               @"forActivity": self.ac23,
-                                              @"date": obj22.date}];
+                                              @"date": obj22}];
     
     
     

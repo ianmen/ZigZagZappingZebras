@@ -43,7 +43,15 @@
     Observations *observation = [Observations create];
     observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
     observation.comment = self.notesTextField.text;
-    observation.date = [NSDate date];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar]
+                                    components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit
+                                    fromDate:[NSDate date]];
+    NSDate *startDate = [[NSCalendar currentCalendar]
+                         dateFromComponents:components];
+    
+    
+    observation.date = startDate;
     observation.forActivity = self.activity;
     observation.fromStudent = self.student;
     observation.byUser = userLars;
