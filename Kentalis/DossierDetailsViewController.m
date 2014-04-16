@@ -107,7 +107,7 @@
     //Load in the new detail view controller of the dossier
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    NSLog(@"The index number: %i",indexPath.row);
+
     _ac23 = [_orderedSet objectAtIndex:indexPath.row];
     
     DossierStudent2TableViewController *destination = (DossierStudent2TableViewController *)[segue destinationViewController];
@@ -117,7 +117,7 @@
     destination.ac1 = self.ac23;
     
     
-    NSLog(@"Activity name: %@", self.ac23.title);
+
     _observationArray = [Observations where:@{@"fromStudent": self.student,
                                               @"forActivity": self.ac23}];
     
