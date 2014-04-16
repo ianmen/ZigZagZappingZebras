@@ -28,6 +28,7 @@
     [super viewDidLoad];
     
     self.activities = [Activity all];
+    [self.activityPickerVIew selectRow:6 inComponent:0 animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,30 +50,43 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    //you can also write code here to descide what data to return depending on the component ("column")
     if (self.activities != nil) {
         Activity *activity = [self.activities objectAtIndex:row];
-        return activity.title;//assuming the array contains strings..
+        return activity.title;
     }
-    return @"";//or nil, depending how protective you are
+    return nil;
+}
+
+- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.activity = [self.activities objectAtIndex:row];
+    
+    //NSLog(@"Geselecteerde activiteit: %@. Index van de geselecteerde activiteit: %i", [self.activities objectAtIndex:row], row);
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
+    if (self.activity != nil) {
+        //Creation of the user
+        NSArray *user = [User where:@"name == 'Lars van Beek'"];
+        User *userLars = user[0];
     
-    //Creation of the user
-    NSArray *user = [User where:@"name == 'Lars van Beek'"];
-    User *userLars = user[0];
+        Observations *observation = [Observations create];
+        observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
+        observation.comment = self.notesTextField.text;
+        observation.date = [NSDate date];
+        observation.forActivity = self.activity;
+        observation.fromStudent = self.student;
+        observation.byUser = userLars;
+        [observation save];
     
-    Observations *observation = [Observations create];
-    observation.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-    observation.comment = self.notesTextField.text;
-    observation.date = [NSDate date];
-    observation.forActivity = self.activity;
-    observation.fromStudent = self.student;
-    observation.byUser = userLars;
-    [observation save];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Activiteit"
+                                                        message:@"U dient een activiteit te selecteren."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 /*
