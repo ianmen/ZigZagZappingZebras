@@ -11,7 +11,8 @@
 #import "Activity.h"
 #import "DossierOverviewViewController.h"
 #import "DossierStudent2TableViewController.h"
-#import "DossierStudent2TableViewController.h"
+#import "DatumSelectTableViewController.h"
+
 
 @interface DossierDetailsViewController ()
 
@@ -111,11 +112,11 @@
 
     _ac23 = [_orderedSet objectAtIndex:indexPath.row];
     
-    DossierStudent2TableViewController *destination = (DossierStudent2TableViewController *)[segue destinationViewController];
+    DatumSelectTableViewController *destination = (DatumSelectTableViewController*)[segue destinationViewController];
     
     //Set the student of the destination view controllerer
     destination.student = self.student;
-    destination.ac1 = self.ac23;
+    destination.ac23 = self.ac23;
     
     
 
@@ -125,7 +126,7 @@
 
     
     
-    destination.observation = _observationArray;
+    destination.observationArray = _observationArray;
     
 }
 

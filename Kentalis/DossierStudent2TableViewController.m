@@ -59,7 +59,7 @@
 {
 
     // Return the number of rows in the section.
-    return 5;
+    return [_observation count];
 }
 
 
@@ -68,27 +68,23 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"table" forIndexPath:indexPath];
     
     // Custom initialization
-    slaap = 0;
-    doezelig = 0;
-    alert = 0;
-    hoogalert = 0;
-    stress = 0;
+//    slaap = 0;
+//    doezelig = 0;
+//    alert = 0;
+//    hoogalert = 0;
+//    stress = 0;
+//    
     
-    
-    //Do a for each for all the observations
-    for (Observations *ob in _observation) {
-        
-        
-        if(ob.altertness.intValue == 0) slaap++;
-        if(ob.altertness.intValue == 1) doezelig++;
-        if(ob.altertness.intValue == 2) alert++;
-        if(ob.altertness.intValue == 3) hoogalert++;
-        if(ob.altertness.intValue == 4) stress++;
-        
-        
-    }
-
-    
+//    //Do a for each for all the observations
+//    for (Observations *ob in _observation) {
+//        
+//        
+//
+//        
+//        
+//    }
+//
+//    
     // Configure the cell's
     // Slaap
     // Doezelig
@@ -96,11 +92,23 @@
     // Hoog Alert
     // Stress
     
-    if(indexPath.row == 0 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Slaap", slaap];
-    if(indexPath.row == 1 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Doezelig", doezelig];
-    if(indexPath.row == 2 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Alert", alert];
-    if(indexPath.row == 3 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Hoog Alert",hoogalert];
-    if(indexPath.row == 4 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Stress", stress];
+//    if(indexPath.row == 0 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Slaap", slaap];
+//    if(indexPath.row == 1 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Doezelig", doezelig];
+//    if(indexPath.row == 2 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Alert", alert];
+//    if(indexPath.row == 3 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Hoog Alert",hoogalert];
+//    if(indexPath.row == 4 )cell.textLabel.text = [NSString stringWithFormat:@"%i - Stress", stress];
+    
+    Observations *ob = [_observation objectAtIndex:indexPath.row];
+    NSString *text;
+            if(ob.altertness.intValue == 0) text = @"Slaap";
+            if(ob.altertness.intValue == 1) text = @"Doezelig";
+            if(ob.altertness.intValue == 2) text = @"Alert";
+            if(ob.altertness.intValue == 3) text = @"Hoog Alert";
+            if(ob.altertness.intValue == 4) text = @"Stress";
+    
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Observatie %i :  %@", indexPath.row+1,text];
+    
     
     return cell;
 }
