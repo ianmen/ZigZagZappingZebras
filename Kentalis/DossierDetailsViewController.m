@@ -11,6 +11,7 @@
 #import "Activity.h"
 #import "DossierOverviewViewController.h"
 #import "DossierStudent2TableViewController.h"
+#import "DossierStudent2TableViewController.h"
 
 @interface DossierDetailsViewController ()
 

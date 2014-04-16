@@ -33,6 +33,7 @@
 		603ABA4918FBDE6A00C095D7 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4818FBDE6A00C095D7 /* JBLineChartFooterView.m */; };
 		603ABA4C18FBE8BE00C095D7 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603ABA4B18FBE8BE00C095D7 /* JBChartTooltipView.m */; };
 		6052F74418F415EB00BEBA42 /* DossierOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052F74318F415EB00BEBA42 /* DossierOverviewViewController.m */; };
+		6064D0C718FE919C003B9950 /* DatumSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064D0C618FE919C003B9950 /* DatumSelectTableViewController.m */; };
 		606BD58A18FD41D3006BAFD0 /* DossierStudent2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */; };
 		6085D77518D70F0E003F2BF3 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085D77418D70F0E003F2BF3 /* student.png */; };
 		6085D77818D70F67003F2BF3 /* DossierTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085D77718D70F67003F2BF3 /* DossierTableViewController.m */; };
@@ -105,6 +106,8 @@
 		6049791118F429E900EB8954 /* JBUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		6052F74218F415EB00BEBA42 /* DossierOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierOverviewViewController.h; sourceTree = "<group>"; };
 		6052F74318F415EB00BEBA42 /* DossierOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierOverviewViewController.m; sourceTree = "<group>"; };
+		6064D0C518FE919C003B9950 /* DatumSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatumSelectTableViewController.h; sourceTree = "<group>"; };
+		6064D0C618FE919C003B9950 /* DatumSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatumSelectTableViewController.m; sourceTree = "<group>"; };
 		606BD58818FD41D3006BAFD0 /* DossierStudent2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DossierStudent2TableViewController.h; sourceTree = "<group>"; };
 		606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DossierStudent2TableViewController.m; sourceTree = "<group>"; };
 		6085D77418D70F0E003F2BF3 /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				46294F8318BB553400016E8F /* AppDelegate.h */,
 				46294F8418BB553400016E8F /* AppDelegate.m */,
 				46294F8618BB553400016E8F /* Main.storyboard */,
+				6064D0C518FE919C003B9950 /* DatumSelectTableViewController.h */,
+				6064D0C618FE919C003B9950 /* DatumSelectTableViewController.m */,
 				606BD58818FD41D3006BAFD0 /* DossierStudent2TableViewController.h */,
 				606BD58918FD41D3006BAFD0 /* DossierStudent2TableViewController.m */,
 				602EB7A418CDD17200318B20 /* Entity */,
@@ -434,6 +439,7 @@
 				603ABA4118FBDCCC00C095D7 /* JBBarChartFooterView.m in Sources */,
 				60C0D20118CF33B2008A305B /* Program.m in Sources */,
 				603ABA4918FBDE6A00C095D7 /* JBLineChartFooterView.m in Sources */,
+				6064D0C718FE919C003B9950 /* DatumSelectTableViewController.m in Sources */,
 				603ABA4618FBDD0100C095D7 /* JBChartInformationView.m in Sources */,
 				6052F74418F415EB00BEBA42 /* DossierOverviewViewController.m in Sources */,
 				6039364C18E9710A00C54089 /* DossierStudentViewController.m in Sources */,
