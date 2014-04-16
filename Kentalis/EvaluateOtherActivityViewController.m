@@ -1,18 +1,18 @@
 //
-//  EvaluateActivityViewController.m
+//  EvaluateOtherActivityViewController.m
 //  Kentalis
 //
-//  Created by Lars van Beek on 25/03/14.
+//  Created by Lars van Beek on 16/04/14.
 //  Copyright (c) 2014 Tilburg University. All rights reserved.
 //
 
-#import "EvaluateActivityViewController.h"
+#import "EvaluateOtherActivityViewController.h"
 
-@interface EvaluateActivityViewController ()
+@interface EvaluateOtherActivityViewController ()
 
 @end
 
-@implementation EvaluateActivityViewController
+@implementation EvaluateOtherActivityViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,12 +26,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.activities = [Activity all];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    if (self.activities != nil) {
+        return [self.activities count];
+    } else {
+        return 0;
+    }
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    //you can also write code here to descide what data to return depending on the component ("column")
+    if (self.activities != nil) {
+        Activity *activity = [self.activities objectAtIndex:row];
+        return activity.title;//assuming the array contains strings..
+    }
+    return @"";//or nil, depending how protective you are
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
@@ -50,25 +73,6 @@
     [observation save];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-   // NSManagedObjectContext *context = [CoreDataManager sharedManager].managedObjectContext;
-    //Observations *ob1 = [NSEntityDescription
-     //                                 insertNewObjectForEntityForName:@"Observations"
-     //                                 inManagedObjectContext:context];
-    //ob1.altertness = [NSNumber numberWithInt:self.evaluationSegmentedControl.selectedSegmentIndex];
-    //ob1.comment = self.notesTextField.text;
-    //ob1.date = [NSDate date];
-    //ob1.forActivity = self.activity;
-    //ob1.fromStudent = self.student;
-    //ob1.byUser = userLars;
-
-    
-    //NSError *error;
-    //if (![context save:&error]) {
-       // NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    //}
-    
-//
 }
 
 /*
