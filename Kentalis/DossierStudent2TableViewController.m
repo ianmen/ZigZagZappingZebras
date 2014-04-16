@@ -108,6 +108,7 @@
     
     
     cell.textLabel.text = [NSString stringWithFormat:@"Observatie %i :  %@", indexPath.row+1,text];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Opmerking: %@", ob.comment];
     
     
     return cell;
