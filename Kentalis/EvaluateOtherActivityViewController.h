@@ -17,7 +17,6 @@
 
 - (IBAction)saveButtonPressed:(id)sender;
 
-
 @property (strong, nonatomic) IBOutlet UIPickerView *activityPickerVIew;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *evaluationSegmentedControl;
 @property (strong, nonatomic) IBOutlet UITextField *notesTextField;
